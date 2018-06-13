@@ -1,5 +1,5 @@
-const { events } = require('brigadier')
+const { events } = require("brigadier")
 
-events.on("exec", (brigadeEvent, project) => {
-    console.log("Hello world!")
+events.on("push", (e, project) => {
+    console.log("received push for commit " + e.commit)
 })
